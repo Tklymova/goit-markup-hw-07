@@ -695,16 +695,27 @@ p {
 
 .dark-bg {
     background: var(--color-navy-blue);
-    padding: 96px 0 96px 0;}
+    padding: 96px 0 96px 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+gap: 72px;}
 
 
 @media only screen and (min-width: 1158px){
 
 .dark-bg {
-       padding: 100px 0 100px 0;}
+       padding: 100px 0 100px 0;
+       flex-direction: row;
+       gap: 80px;
+
+    }
 }
 
-@media only screen and (min-width: 1158px){
+.note-small-size { max-width: 268px;}
+
+@media only screen and (min-width: 768px){
 .note-small-size {
     max-width: 264px;
     }}
@@ -728,11 +739,14 @@ p {
     flex-direction: column;
 gap: 16px;
 align-items: center;
-    align-content: center;
-    justify-content: center}
+align-content: center;
+      
+justify-content: center}
 
-    @media only screen and (min-width: 1158px) {
-        .footer-item {align-items: flex-start;}
+  
+
+    @media only screen and (min-width: 768px) {
+        .footer-item {align-items:flex-start ;}
     }
 
 /* 
@@ -753,20 +767,30 @@ align-items: center;
         }} */
 
 
+        .footer-size{display: flex;
+            flex-direction: column;
+            gap:72px;
+            align-items:center;
+        }
+
+@media only screen and (min-width: 768px){
+    .footer-size {
+        flex-direction: row;
+                 gap: 24px;
+        
+    }}
+    @media only screen and (min-width: 1158px){
+        .footer-size {
+           gap: 120px;
+            
+        }}
 
 
-@media only screen and (min-width: 1158px){
-.footer-size {
-    display: flex;
-        align-items: baseline;
-}}
 
-
-
-@media only screen and (min-width: 1158px){
+/* @media only screen and (min-width: 1158px){
 .footer-item-size {
     margin-right: 120px;
-}}
+}} */
 
 .icons-size-footer {
     gap: 16px;
@@ -784,14 +808,18 @@ align-items: center;
     background-color: var(--color-green);
 }
 
-.footer-form {
-    margin-left: 80px;
+.footer-email{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+   
 }
 
+@media only screen and (min-width: 768px){
 .footer-email {
-    display: flex;
+    flex-direction: row;
     gap: var(--indent);
-}
+}}
 
 .subscribe-btn {
     background-color: var(--color-iris);
@@ -828,7 +856,7 @@ align-items: center;
 }
 
 .subscribe-email {
-    width: 264px;
+    width: 398px;
     height: 40px;
     border: 1px solid var(--color-white);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -839,7 +867,11 @@ align-items: center;
     font-size: 12px;
     line-height: 2.0;
     color: var(--color-white);
-}
+
+    }
+
+    @media only screen and (min-width: 768px){
+    .subscribe-email {width: 264px;}}
 
 .subscribe-email::placeholder {
     font-weight: 400;
