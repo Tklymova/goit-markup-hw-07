@@ -20,50 +20,168 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!--Top Line-->
+    <!-- Top Line -->
     <header class="header-nav">
-      <!--Menu Nav-->
-      <div class="menu-nav-div container">
-        <nav class="menu-nav">
-          <!--logo-->
+      <!-- Menu Nav -->
+      <div class="container">
+        <!--Phone-->
+        <div class="menu-nav-phone">
           <a
             href="./index.html"
             class="logo-studio-dark logo-web link logo-web-pad"
           >
             Web<span class="logo-studio-dark">Studio</span></a
           >
-          <ul class="list nav-size">
-            <li class="nav-size-li">
-              <a href="./index.html" class="link-nav link nav-size-li-a"
-                >Studio</a
-              >
-            </li>
-            <li class="nav-size-li">
-              <a
-                href="./portfolio.html"
-                class="link-nav link-nav-current link nav-size-li-a"
-                >Portfolio</a
-              >
-            </li>
-            <li class="nav-size-li">
-              <a href="" class="link-nav link nav-size-li-a">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="adress-st">
-          <ul class="list adress-size">
-            <li class="nav-size-li">
-              <a href="mailto:info@devstudio.com" class="link-address-nav link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="nav-size-li">
-              <a href="tel:+110001111111" class="link-address-nav link"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+          <button
+            class=" menu-burger menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="icon-menu-burger" width="32" height="22">
+              <use href="./images/icons.svg#menuhamburger"></use>
+              <!-- <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path> -->
+            </svg>
+          </button>
+        </div>
+          <!--Menu window phone-->
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu window-button">
+              
+              <svg class="modal-icon" width="8" height="8">
+                <use href="./images/icons.svg#iconcloseblack18"></use>
+              </svg>
+                              <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <ul class="mobile-menu">
+              <li class="nav-size-phone">
+                <a href="./index.html" class="link-nav link">Studio</a>
+              </li>
+              <li class="nav-size-phone">
+                <a href="./portfolio.html" class="link-nav link">Portfolio</a>
+              </li>
+              <li class="nav-size-phone">
+                <a href="" class="link-nav link">Contacts</a>
+              </li>
+            </ul>
+            <ul class="list adress-size-phone ">
+                           <li class="nav-size-li ">
+                <a href="tel:+110001111111" class="link-address-phone link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="nav-size-li">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="link-tel-phone link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="list icons-size-phone icons-size-footer">
+              <li class="icons-item">
+                <a
+                  class="link link-icons link-icons-footer"
+                  href="https://Instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icons-pictire" width="24" height="24">
+                    <use href="./images/icons.svg#iconinstagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icons-item">
+                <a
+                  class="link link-icons link-icons-footer"
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icons-pictire" width="24" height="24">
+                    <use href="./images/icons.svg#icontwitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icons-item">
+                <a
+                  class="link link-icons link-icons-footer"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icons-pictire" width="24" height="24">
+                    <use href="./images/icons.svg#iconfacebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icons-item">
+                <a
+                  class="link link-icons link-icons-footer"
+                  href="https://linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="icons-pictire" width="24" height="24">
+                    <use href="./images/icons.svg#iconlinkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>   
+        <div class="menu-nav-div">
+          <nav class="menu-nav">
+            <!-- logo -->
+
+            <a
+              href="./index.html"
+              class="logo-studio-dark logo-web link logo-web-pad"
+            >
+              Web<span class="logo-studio-dark">Studio</span></a
+            >
+            <ul class="list nav-size">
+              <li class="nav-size-li">
+                <a
+                  href="./index.html"
+                  class="link-nav link-nav-current link nav-size-li-a"
+                  >Studio</a
+                >
+              </li>
+              <li class="nav-size-li">
+                <a href="./portfolio.html" class="link-nav link nav-size-li-a"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-size-li">
+                <a href="" class="link-nav link nav-size-li-a">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="adress-st">
+            <ul class="list adress-size">
+              <li class="nav-size-li">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="link-address-nav link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="nav-size-li">
+                <a href="tel:+110001111111" class="link-address-nav link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
     <main>
@@ -90,7 +208,7 @@
           </ul>
           <!--Section img APP Marketing Design-->
 
-          <ul class="list img-marketing-size">
+          <!-- <ul class="list img-marketing-size">
             <li class="img-marketing-item">
               <a href="" class="link link-marketing">
                 <div class="marketing-card">
@@ -306,12 +424,12 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="dark-bg">
-      <div class="container footer-size">
-        <!--Logo-->
-        <div class="footer-item-size footer-item">
+    <footer class="container dark-bg">
+      <div class="footer-size "> 
+    <!-- Logo-->
+         <div class="footer-item-size footer-item">
           <a
             href="./index.html"
             class="logo-studio-dark link logo-web logo-div-footer"
@@ -375,7 +493,8 @@
             </li>
           </ul>
         </div>
-        <div class="footer-form">
+      </div>
+        <div class="footer-form footer-item">
           <p class="note-small note-smal-footer">Subscribe</p>
           <form class="footer-email">
             <label>
@@ -393,7 +512,13 @@
             </button>
           </form>
         </div>
-      </div>
-    </footer>
+         </footer>
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
