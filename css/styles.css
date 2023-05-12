@@ -23,9 +23,12 @@
 
     --indent: 24px;
     --indent-phone: 16px;
+    --indent-72: 72px;
     --feature-items-tablet: 2;
     --feature-items: 4;
     --aredoing-items: 3;
+    --ourtem-items-phone: 1;
+    --ourtem-items-tablet: 2;
     --ourtem-items: 4;
     --portfolio-items: 3;
     --customers-item-phone: 2;
@@ -61,11 +64,21 @@ body {
 
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1158px;
+        max-width: 1200px;
     }
 
+}
+
+label {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    gap: 4px;
 }
 
 
@@ -74,6 +87,8 @@ body {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 textarea {
@@ -146,7 +161,7 @@ p {
     }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .logo-web-pad {
         margin-right: 76px;
     }
@@ -210,7 +225,7 @@ p {
 }
 
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .menu-nav-div {
         gap: 332px;
     }
@@ -311,7 +326,7 @@ p {
 }
 
 
-@media only screen and (min-width:1158px) {
+@media only screen and (min-width: 1200px) {
 
     .adress-size {
         flex-direction: row;
@@ -361,7 +376,7 @@ p {
 
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .my-inscription {
         margin: 0 auto 48px;
 
@@ -390,10 +405,10 @@ p {
 
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .hero-dark-bg {
         padding: 188px 0 188px 0;
-        max-width: 1140px;
+        max-width: 1440px;
     }
 
 }
@@ -429,7 +444,7 @@ p {
 
 .customers {padding:var(--size-padding-blok-phone);}
 
-@media only screen and (min-width: 1158px){
+@media only screen and (min-width: 1200px){
 .customers {
     padding: var(--size-padding-blok);
     }
@@ -442,7 +457,7 @@ p {
 }
 
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .feature {
 
         padding: var(--size-padding-blok);
@@ -453,7 +468,7 @@ p {
     display: none
 } 
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .feature-icons {
 
         display: flex;
@@ -502,20 +517,30 @@ p {
     .customer-size{
         column-gap: var(--indent);}  
 }
-@media only screen and (min-width: 1158px){
+@media only screen and (min-width: 1200px){
     .customer-size {
         flex-wrap: nowrap;
         gap: 24px;
     }}
 
 
-
+    
 .are-we-doing-size,
-.our-team-size,
 .icons-size
 {    display: flex;
     flex: wrap;
     gap: var(--indent);
+}
+
+.our-team-size
+{    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent-72);
+    justify-content: center;
+    }
+@media only screen and (min-width: 768px){
+    .our-team-size {row-gap: 64px;
+        column-gap: 24px;}
 }
 
 
@@ -580,13 +605,13 @@ p {
 
 
     @media only screen and (min-width: 768px){
-        .feature-size-item  {
+        .feature-size-item  {           
         width: calc((100% - var(--indent)*(var(--feature-items-tablet) - 1))/var(--feature-items-tablet));
         }}
 
 
 
-    @media only screen and (min-width: 1158px){
+    @media only screen and (min-width: 1200px){
         .feature-size-item  {
         width: calc((100% - var(--indent)*(var(--feature-items) - 1))/var(--feature-items));
         }}
@@ -598,13 +623,34 @@ p {
     width: calc((100% - var(--indent)*(var(--aredoing-items) - 1))/var(--aredoing-items));
 }
 
+.icons-size
+    {    display: flex;
+        flex: wrap;
+        gap: 24px;
+          
+    }
+
+ 
 .our-team-item {
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
-    width: calc((100% - var(--indent)*(var(--ourtem-items) - 1))/var(--ourtem-items));
+            width: 264px;
+            /* width: calc((100% - var(--indent-72)*(var(--ourtem-items-phone) - 1))/var(--ourtem-items-phone)); */
 }
+
+
+
+@media only screen and (min-width: 768px) {
+    .our-team-item {
+    /* width: calc((100% - var(--indent)*(var(--ourtem-items-tablet) - 1))/var(--ourtem-items-tablet)); */
+    width: 264px;
+}} 
+
+
+@media only screen and (min-width: 1200px) {.our-team-item{
+width: calc((100% - var(--indent)*(var(--ourtem-items) - 1))/var(--ourtem-items));}}
 
 .customer-item {
     width: calc((100% - var(--indent-phone)*(var(--customers-item-phone) - 1))/var(--customers-item-phone));
@@ -618,7 +664,7 @@ p {
     }}
     
 
-@media only screen and (min-width: 1158px){
+@media only screen and (min-width: 1200px){
 .customer-item {
     width: calc((100% - var(--indent)*(var(--customers-item) - 1))/var(--customers-item));
    
@@ -640,7 +686,7 @@ p {
     color: var(--color-navy-blue);
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1200px) {
     .note-medium {
         font-weight: 500;
         font-size: 20px;
@@ -711,12 +757,12 @@ margin-bottom: 8px;
     text-align: center;
     margin-bottom: 8px;
 }
-@media only screen and (max-width: 1198px){
+@media only screen and (max-width: 1199px){
 .are-we-doing {
     display: none;
 }}
 
-@media only screen and (min-width: 1158px){
+@media only screen and (min-width: 1200px){
 .are-we-doing {
 
     padding-bottom: 120px;
@@ -725,15 +771,18 @@ margin-bottom: 8px;
 
     margin-bottom: 72px;
     padding-left: auto;
-    padding-right: auto;
-}
-
+    padding-right: auto;}
 
 .our-team {
     background-color: var(--color-cloud);
+    padding: var(--size-padding-blok-phone);}
+     
+
+@media only screen and (min-width: 1200px){
+.our-team {
+    
     padding: var(--size-padding-blok);
-
-
+}
 }
 
 .our-team-background {
@@ -765,15 +814,22 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-content: center;
-gap: 72px;}
+gap: 72px;
+}
+
+@media only screen and (min-width: 768px){
+
+    .dark-bg {padding: 96px 0 96px 106px;
+        align-items: flex-start;}}
 
 
-@media only screen and (min-width: 1158px){
+@media only screen and (min-width: 1200px){
 
 .dark-bg {
        padding: 100px 0 100px 0;
        flex-direction: row;
        gap: 80px;
+       align-content: center;
 
     }
 }
@@ -782,7 +838,7 @@ gap: 72px;}
 
 @media only screen and (min-width: 768px){
 .note-small-size {
-    max-width: 264px;
+    width: 264px;
     }}
 
 .note-smal-footer {
@@ -801,8 +857,8 @@ gap: 72px;}
 .footer-form {width: 100%;}}
 
 
-@media only screen and (max-width: 1157px) {
-.footer-form {width: 496px;}}
+@media only screen and (min-width: 1200px) {
+.footer-form {width: 453px;}}
 
 
 .footer-item {display: flex;
@@ -850,8 +906,9 @@ justify-content: center}
                  gap: 24px;
         
     }}
-    @media only screen and (min-width: 1158px){
+    @media only screen and (min-width: 1200px){
         .footer-size {
+            align-items: flex-start;
            gap: 120px;
             
         }}
@@ -963,10 +1020,11 @@ justify-content: center}
 
   @media only screen and (min-width: 768px){
   .section-button {
-    padding: 64px 0;
+    padding-top: 64px;
+          padding-bottom: 96px;
     }}
 
-    @media only screen and (min-width: 1158px){
+    @media only screen and (min-width: 1200px){
         .section-button {
           padding-top: 100px;
           padding-bottom: 72px;
@@ -976,13 +1034,13 @@ justify-content: center}
         flex-wrap: wrap;
         justify-content: flex-start;
     gap: var(--indent);
-    width: 263px;
+    width: 67%;
         }
 
 @media only screen and (min-width: 768px) {
 .section-button-size {
         justify-content: center;
-        width: 586px;
+        width: 100%;
         }}
 
 
@@ -1006,7 +1064,8 @@ justify-content: center}
 }
 
 @media only screen and (max-width: 767px){ 
-    .filter-btn-all{ padding: 8px 16px;}}
+    .filter-btn-all{ padding: 8px 16px;
+        border: none}}
 
 .filter-btn-all:hover,
 .filter-btn-all:focus {
@@ -1018,15 +1077,38 @@ justify-content: center}
 }
 
 .img-marketing-size {
+    padding-top: 48px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: var(--indent);
     row-gap: 48px;
 }
 
+
+@media only screen and (min-width: 768px){
+    .img-marketing-size{
+        padding-top: 64px;
+        row-gap: 72px;
+        justify-content: flex-start;}}
+
+    @media only screen and (min-width: 1200px){
+        .img-marketing-size{
+            padding-top: 72px;
+            row-gap: 48px;}}
+
+
 .img-marketing-item {
-    width: calc((100% - var(--indent)*(var(--portfolio-items) - 1))/var(--portfolio-items));
+    width: 396px;
+    
 }
+
+@media only screen and (min-width: 768px)
+{.img-marketing-item {width: 356px;}
+    }
+    @media only screen and (min-width: 1200px)
+{.img-marketing-item {width: 360px;}
+    }
 
 .marketing-sign {
     padding: 32px 16px;
@@ -1037,10 +1119,15 @@ justify-content: center}
 
 .note-medium-sign {
     margin-bottom: 8px;
+    text-align:start;
+    font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
 }
 
 .paragraff-portfolio {
     color: var(--color-slate);
+
 
 }
 
