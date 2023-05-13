@@ -388,7 +388,6 @@ p {
 .hero-dark-bg {
 
     padding: 112px 0 112px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
     background-color: var(--color-navy-blue);
     max-width: 428px;
     background-repeat: no-repeat;
@@ -396,15 +395,61 @@ p {
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
+       
 }
 
-@media only screen and (min-width:768px) {
-    .hero-dark-bg {
-        max-width: 768px;
+
+
+.hero-dark-bg
+{
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_mobilehero@1x.jpg);
+
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-dark-bg
+       {
+         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_mobilehero@2x.jpg);
+      }
     }
 
-}
+ 
 
+@media only screen and (min-width:481px)  {
+    .hero-dark-bg
+    {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_tablethero@1x.jpg);
+    
+    }
+    
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .hero-dark-bg
+           {
+             background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_tablethero@2x.jpg);
+          }
+        }}
+
+        @media only screen and (min-width: 769px) {
+            .hero-dark-bg {
+                max-width: 100%;
+            }
+        
+        }
+                @media only screen and (min-width:1200px)  {
+            .hero-dark-bg
+            {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-officedesktop@1x.jpg);
+            
+            }
+            
+            @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+                .hero-dark-bg
+                   {
+                     background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-officedesktop@2x.jpg);
+                  }
+                }}
+        
+                
 @media only screen and (min-width: 1200px) {
     .hero-dark-bg {
         padding: 188px 0 188px 0;
@@ -649,8 +694,8 @@ p {
 }} 
 
 
-@media only screen and (min-width: 1200px) {.our-team-item{
-width: calc((100% - var(--indent)*(var(--ourtem-items) - 1))/var(--ourtem-items));}}
+/* @media only screen and (min-width: 1200px) {.our-team-item{
+width: calc((100% - var(--indent)*(var(--ourtem-items) - 1))/var(--ourtem-items));}} */
 
 .customer-item {
     width: calc((100% - var(--indent-phone)*(var(--customers-item-phone) - 1))/var(--customers-item-phone));
@@ -701,6 +746,10 @@ align-content: center;
 max-width: 100%;
 gap: 8px;
 }
+@media only screen and (min-width: 768px){
+.feature-phone{align-items: flex-start;
+
+}}
 
 /* .note-medium-feature {
 margin-bottom: 8px;
@@ -712,10 +761,10 @@ margin-bottom: 8px;
 
 .note-medium-team {
     margin-top: 8px;
-}
-
-.note-medium-team {
-    text-align: center
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .note-big {
@@ -1112,7 +1161,6 @@ justify-content: center}
 
 .marketing-sign {
     padding: 32px 16px;
-    max-width: 360px;
     border: 1px solid var(--color-cornflower);
     border-top: none;
 }
