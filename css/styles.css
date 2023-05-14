@@ -293,6 +293,10 @@ p {
 
 }
 
+.link-current {
+    color: var(--color-ocean);
+}
+
 .link-nav-current {
     color: var(--color-ocean);
 }
@@ -1277,8 +1281,6 @@ justify-content: center}
 }
 
 .studio-window {
-    width: 408px;
-    height: 584px;
     background: var(--color-dairy);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -1289,6 +1291,13 @@ justify-content: center}
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px;
 }
+@media only screen and (min-width: 320px){
+.studio-window{width: 95%;
+height: 650px;}}
+@media only screen and (min-width: 428px){
+.studio-window {
+    width: 408px;
+    height: 584px;}}
 
 .window-button {
     width: 24px;
@@ -1338,11 +1347,18 @@ justify-content: center}
 } */
 
 label.contact-accept {
-    flex-direction: row;
+    
+     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 8px;
 }
+
+/* @media only screen and (min-width: 320px){
+label.contact-accept{
+    width: 90%;
+}} */
+
 
 .contact-header {
     display: inline-block;
@@ -1352,7 +1368,7 @@ label.contact-accept {
 }
 
 .contact-size {
-    width: 360px;
+   
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
@@ -1363,6 +1379,12 @@ label.contact-accept {
     transition-duration: var(--time-set);
     transition-timing-function: var(--timing-function);
 }
+@media only screen and (min-width: 320px){
+    .contact-size  {width: 95%;}}
+
+    @media only screen and (min-width: 428px)
+    {.contact-size  {width: 360px;}}
+
 
 .contact-size:focus {
     outline-color: var(--color-iris);
@@ -1385,8 +1407,7 @@ label.contact-accept {
 
 
 .contact-comment {
-    width: 360px;
-    height: 120px;
+      height: 120px;
     padding: 8px 16px;
     border-radius: 4px;
     font-weight: 400;
@@ -1394,6 +1415,14 @@ label.contact-accept {
     line-height: 1.17;
 
 }
+
+@media only screen and (min-width: 320px){
+    .contact-comment{width: 95%;}}
+
+    @media only screen and (min-width: 428px){
+        .contact-comment{width: 360px;}}
+    
+
 
 .contact-comment::placeholder {
     font-weight: 400;
@@ -1410,6 +1439,15 @@ label.contact-accept {
     line-height: 1.17;
     letter-spacing: 0.04em;
 }
+
+
+@media only screen and (min-width: 320px){
+.contact-note {width: 200px;
+    }}
+@media only screen and (min-width: 428px){
+.contact-note {width: 330px;
+    }} 
+
 
 .contact-field-name {
     margin-top: 16px;
@@ -1440,7 +1478,7 @@ label.contact-accept {
 .contact-field-accept {
     margin-top: 16px;
     margin-bottom: 24px;
-}
+    }
 
 .contact-note-link {
     color: var(--color-iris);
@@ -1528,7 +1566,9 @@ label.contact-accept {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-bottom: 40px;
     background-color: var(--color-white);
     z-index: 999;
     transform: translateX(100%);
